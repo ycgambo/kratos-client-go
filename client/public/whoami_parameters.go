@@ -162,7 +162,7 @@ func (o *WhoamiParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Regist
 		qAuthorization := qrAuthorization
 		if qAuthorization != "" {
 
-			if err := r.SetQueryParam("Authorization", qAuthorization); err != nil {
+			if err := r.SetHeaderParam("Authorization", qAuthorization); err != nil {
 				return err
 			}
 		}
